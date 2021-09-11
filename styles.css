@@ -1,26 +1,33 @@
+:root {
+    --percent: 6.25%
+}
+
 html,
 body {
     margin: 0px;
     background-color: #9fd2db;
 }
 
+/* height percent? */
+
 #container {
-    width: 65vh;
-    height: 65vh;
+    width: 65%;
+    height: 50%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
+    align-content: flex-start;
     border: black 1px solid;
     margin-left: 100px;
+    position: relative;
 }
 
 .gridBox {
-    width: 6.25%;
-    height: 6.25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: var(--percent);
+    height: var(--percent);
     cursor: default;
+    display: flex;
+    align-items: flex-start;
 }
 
 #header {
