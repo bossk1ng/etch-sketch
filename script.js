@@ -31,6 +31,8 @@ function makeGrid() {
     }
 }
 
+makeGrid()
+
 document.addEventListener("change", function () {
     while (container.firstChild) {
         container.removeChild(container.lastChild);
