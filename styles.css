@@ -11,8 +11,8 @@ body {
 /* height percent? */
 
 #container {
-    width: 65%;
-    height: 50%;
+    width: 500px;
+    height: 500px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -23,8 +23,6 @@ body {
 }
 
 .gridBox {
-    width: var(--percent);
-    height: var(--percent);
     cursor: default;
     display: flex;
     align-items: flex-start;

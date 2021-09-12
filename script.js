@@ -10,7 +10,6 @@ function makeGrid() {
         let gridMember = document.createElement("div");
         gridMember.classList.add("gridBox");
         container.appendChild(gridMember);
-        gridMember.textContent = i % 16
 
         gridMember.addEventListener("mouseover", function changeColor() {
             gridMember.style.backgroundColor = "black";
@@ -19,7 +18,6 @@ function makeGrid() {
             gridMember.style.backgroundColor = "#9fd2db";
         });
     }
-
 
     let gridBoxes = document.getElementsByClassName("gridBox");
     console.log(gridBoxes?.length);
@@ -33,9 +31,10 @@ function makeGrid() {
     }
 }
 
-makeGrid();
-
 document.addEventListener("change", function () {
-    console.log(1);
+    while (container.firstChild) {
+        container.removeChild(container.lastChild);
+    }
     gridSize = parseInt(slider.value);
+    makeGrid();
 });
